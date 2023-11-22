@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark text */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff; /* White container background */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadein 2s ease-in-out;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        form {
+            display: grid;
+            grid-gap: 20px;
+            margin-top: 30px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .submit-button {
+            background-color: #007bff; /* Blue button background */
+            color: #fff;
+            padding: 20px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        .scrolling-text {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scrolling 10s linear infinite;
+        }
+
+        @keyframes scrolling {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <title>Car Data Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="scrolling-text">Enter Car Data</h2>
+        <form action="/predict" method="post">
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make" required>
+
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" required>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required>
+
+            <label for="fuelType">Engine Fuel Type:</label>
+            <input type="text" id="fuelType" name="fuelType" required>
+
+            <label for="engineHP">Engine HP:</label>
+            <input type="number" id="engineHP" name="engineHP" required>
+
+            <label for="engineCylinders">Engine Cylinders:</label>
+            <input type="number" id="engineCylinders" name="engineCylinders" required>
+
+            <label for="transmission">Transmission Type:</label>
+            <input type="text" id="transmission" name="transmission" required>
+
+            <label for="drivenWheels">Driven Wheels:</label>
+            <input type="text" id="drivenWheels" name="drivenWheels" required>
+
+            <label for="doors">Number of Doors:</label>
+            <input type="number" id="doors" name="doors" required>
+
+            <label for="vehicleSize">Vehicle Size:</label>
+            <input type="text" id="vehicleSize" name="vehicleSize" required>
+
+            <label for="vehicleStyle">Vehicle Style:</label>
+            <input type="text" id="vehicleStyle" name="vehicleStyle" required>
+
+            <label for="highwayMPG">Highway MPG:</label>
+            <input type="number" id="highwayMPG" name="highwayMPG" required>
+
+            <label for="cityMPG">City MPG:</label>
+            <input type="number" id="cityMPG" name="cityMPG" required>
+
+            <label for="popularity">Popularity:</label>
+            <input type="number" id="popularity" name="popularity" required>
+
+            
+
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
